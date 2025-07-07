@@ -1,11 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakidu</title>
-</head>
-<body>
-    Hello bakidu
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakidu Website</title>
+
+    <!-- Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Vanta.js & Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto"
+      >
+        <div>
+          <img
+            src="./assets/bakidu_official_logo.png"
+            alt="Bakidu Logo"
+            class="h-10"
+          />
+        </div>
+        <ul class="flex gap-6 text-lg font-medium">
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#events" class="hover:text-blue-500">Event</a></li>
+          <li><a href="#gallery" class="hover:text-blue-500">Gallery</a></li>
+          <li><a href="#about" class="hover:text-blue-500">About Us</a></li>
+        </ul>
+        <button
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+        >
+          <a href="Login.html">Login</a>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Vanta Background -->
+    <section
+      id="home"
+      class="relative h-screen flex justify-center items-center text-center text-white overflow-hidden"
+    >
+      <div id="vanta-hero" class="absolute inset-0 z-0"></div>
+      <div class="z-10 px-6">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Bakidu</h1>
+        <p class="text-lg max-w-xl mx-auto text-blue-100">
+          Explore our events, gallery, and discover what makes Bakidu amazing!
+        </p>
+      </div>
+    </section>
+
+    <!-- Event Section -->
+    <section class="py-16 px-6 max-w-7xl mx-auto" id="events">
+      <h2 class="text-4xl font-bold text-center mb-12 text-blue-800">
+        Upcoming Events
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+        >
+          <img src="./assets/inter.jpeg" class="w-full h-48 object-cover" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold mb-1">Intership Program</h3>
+            <p class="text-sm text-gray-500 mb-2">July 01 - July 31 · Coimbatore</p>
+            <p class="text-sm text-gray-700 mb-3">
+              Explore latest tech trends with industry leaders and innovators.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 hover:underline text-sm font-medium"
+              >Learn More →</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+        >
+          <img src="./assets/innovation.webp" class="w-full h-48 object-cover" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold mb-1">Bakidu Innovation</h3>
+            <p class="text-sm text-gray-500 mb-2">Aug 1-31 · Coimbatore</p>
+            <p class="text-sm text-gray-700 mb-3">
+              Experience live bands, DJs, and cultural vibes under one roof.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 hover:underline text-sm font-medium"
+              >Get Tickets →</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+        >
+          <img src="./assets/bootcamp.webp" class="w-full h-48 object-cover" />
+          <div class="p-5">
+            <h3 class="text-xl font-semibold mb-1">AI Bootcamp</h3>
+            <p class="text-sm text-gray-500 mb-2">May 2025 · Online</p>
+            <p class="text-sm text-gray-700 mb-3">
+              Hands-on sessions for students and developers in AI and ML.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 hover:underline text-sm font-medium"
+              >Register Now →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+      <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">
+        Gallery
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto px-4">
+        <img
+          src="./assets/bakidu_official_logo.png"
+          class="rounded-lg shadow-md hover:scale-105 transition"
+        />
+        <img
+          src="./assets/bakidu_official_logo.png"
+          class="rounded-lg shadow-md hover:scale-105 transition"
+        />
+        <img
+          src="./assets/bakidu_official_logo.png"
+          class="rounded-lg shadow-md hover:scale-105 transition"
+        />
+        <img src="" class="rounded-lg shadow-md hover:scale-105 transition" />
+        <img src="" class="rounded-lg shadow-md hover:scale-105 transition" />
+        <img src="" class="rounded-lg shadow-md hover:scale-105 transition" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 bg-blue-50 text-center">
+      <h2 class="text-4xl font-bold text-blue-900 mb-6">About Us</h2>
+      <!-- <img src="./assets/user 1.jpg" class="rounded-lg shadow-md hover:scale-105 transition" />
+      <img src="" class="rounded-lg shadow-md hover:scale-105 transition" /> -->
+      <div class="flex justify-center gap-10 my-12"> 
+      <div
+        class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+        <img
+          src="./assets/user 1.jpg"
+          alt="User Photo"
+          class="w-full h-60 object-cover"
+        />
+        <div class="p-5 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">Jana Murugesan</h3>
+          <p class="text-sm text-gray-500">CEO & Founder of Bakidu</p>
+          <p class="text-gray-600 text-sm mt-2">
+            Passionate about building human-centered AI tools and digital
+            experiences.
+          </p>
+          <div class="mt-4">
+            <a
+              href="#"
+              class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600 transition"
+              >View Profile</a
+            >
+          </div>
+        </div>
+      </div>
+
+        <div
+        class="max-w-sm bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:scale-105">
+        <img
+          src="./assets/user 1.jpg"
+          alt="User Photo"
+          class="w-full h-60 object-cover"
+        />
+        <div class="p-5 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">Harshini</h3>
+          <p class="text-sm text-gray-500">Bussniess Analyst</p>
+          <p class="text-gray-600 text-sm mt-2">
+            Passionate about building human-centered AI tools and digital
+            experiences.
+          </p>
+          <div class="mt-4">
+            <a
+              href="#"
+              class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-600 transition"
+              >View Profile</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <p class="max-w-2xl mx-auto text-gray-700 text-lg">
+        Bakidu is a vibrant community of learners, creators, and performers who
+        come together to celebrate innovation, expression, and connection. Our
+        mission is to empower talent through events, learning, and shared
+        experiences.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-center text-sm text-gray-600 p-4">
+      © 2025 Bakidu. All rights reserved.
+    </footer>
+
+    <!-- Vanta JS Initialization -->
+    <script>
+      VANTA.GLOBE({
+        el: "#vanta-hero",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x337eff,
+        backgroundColor: 0x000000,
+      });
+    </script>
+  </body>
 </html>
